@@ -44,10 +44,10 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          platforms: linux/386,linux/amd64
+          platforms: linux/arm64/v8
           push: true
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
           tags: |
-            aiogram/telegram-bot-api:latest
-            aiogram/telegram-bot-api:${{ env.TG_SERVER_VERSION }}
+            evilwolf/telegram-bot-api:latest
+            evilwolf/telegram-bot-api:${{ env.TG_SERVER_VERSION }}
